@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    
+}
+a{
+    color:rgb(1, 133, 133);
+    text-decoration: none;
+
+}
+header{
+    position: flex;
+    background-color: azure;
+}
+
+.logo{
+    position: relative;
+    top: 30px;
+    left: 150px;
+}
+.phone{
+    position: relative;
+    top:-75px ;
+    left:1000px;
+}
+ul{
+    position: relative;
+    display: flex;
+    left: 300px;
+    top: -50px;
+}
+li{    
+    padding:10px 10px;
+    margin:5px;
+    list-style: none;
+    bottom: -1px;
+    border: solid azure;
+}
+li:hover{
+    border-bottom:solid yellow;
+    
+}
+
+main{
+    background-color: azure;
+}
+.mainphoto{
+    margin:0 auto;
+    display: block;
+    width:95%;
+}
+.mainletter{
+    position: absolute;
+    top:850px;
+    left: 5%;
+    font-size: 75px;
+    background-color: azure;
+}
+.sub{
+    
+}
+.subphoto{
+    width: 60%;
+    
+}
+.subletter{
+    font-size: 25px;
+    margin: 40px;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+}
+.btn{
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 100px;
+    display: block;
+    margin-left: 70%;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(253, 194, 0);
+}
+.infobtn{
+    margin-left: 63%;
+}
+.event {
+    max-width: 980px;
+    margin: 100px auto;
+    clear: both;
+}
+.other{
+    width: 980px;
+    margin: 30px auto;
+}
+.otherphoto{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.otherphoto div{
+    width: 33%;
+    height: auto;
+    padding: 15px;
+   
+    box-sizing: border-box;
+}
+.map{
+    margin: 0 auto ;
+    width: 600px;
+    height: 600px;
+}
+footer{
+    background-color:rgb(1, 187, 187) ;
+    color: whitesmoke;
+    text-align: center;
+}
