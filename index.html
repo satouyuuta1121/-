@@ -6,9 +6,6 @@
     <title>〇〇温泉</title>
     <link rel="stylesheet" href="app.css">
     <link href="https://use.fontawesome.com/releases/v6.2.0/css/all.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/e3ae05b8e6.js"></script>
 </head>
 
@@ -18,13 +15,20 @@
         <div class="phone">
             <i class="fa-solid fa-phone"></i><h3>000-000-0000</h3>
         </div>
-        <ul class="header">
-            <li><a href="#"><h2>インフォメーション</h2></a></li>
-            <li><a href="#"><h2>お風呂・サウナ</h2></a></li>
-            <li><a href="#"><h2>サービス</h2></a></li>
-            <li><a href="#"><h2>お知らせ・イベント</h2></a></li>
-            <li><a href="#"><h2>お問合せ</h2></a></li>
+        <div class="menu-trigger js-toggle-sp-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-menu js-toggle-sp-menu-target">
+            <ul class="menu-item js-sp-menu-link">
+                <li><a href="#"><h2>インフォメーション</h2></a></li>
+                <li><a href="#"><h2>お風呂・サウナ</h2></a></li>
+                <li><a href="#"><h2>サービス</h2></a></li>
+                <li><a href="#"><h2>お知らせ・イベント</h2></a></li>
+                <li><a href="#"><h2>お問合せ</h2></a></li>
         </ul>
+        </nav>
     </header>
     <main>
         <div class="main">
@@ -38,11 +42,11 @@
                     疲れた体をリフレッシュ。サウナでととのう。家族と一緒に食事をしたり。<br>
                     温泉でゆったりまったり、楽しんでほしい。それが私達のねがいです。
                 </h4>
-                <button class="btn infobtn">
+            </div>
+            <button class="btn infobtn">
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 インフォメーション
-                </button>
-            </div>
+            </button>
         </div>
         <section class="event">
             <h2>お知らせ・イベント</h2>
@@ -60,27 +64,27 @@
             <h2>その他のサービス</h2>
             <section  class="otherphoto">
                 <div>
-                    <img src="./img/1.jpeg" alt="">
+                    <img src="./img/1.jpeg" alt="" class="panel">
                     <p>レストラン</p>
                 </div>
                 <div>
-                    <img src="./img/2.jpeg" alt="">
+                    <img src="./img/2.jpeg" alt=""class="panel">
                     <p>プール</p>
                 </div>
                 <div>
-                    <img src="./img/3.jpeg" alt="">
+                    <img src="./img/3.jpeg" alt=""class="panel">
                     <p>キッズルーム</p>
                 </div>
                 <div>
-                    <img src="./img/4.jpeg" alt="">
+                    <img src="./img/4.jpeg" alt=""class="panel">
                     <p>ジム</p>
                 </div>
                 <div>
-                    <img src="./img/5.jpeg" alt="">
+                    <img src="./img/5.jpeg" alt=""class="panel">
                     <p>休憩スペース</p>
                 </div>
                 <div>
-                    <img src="./img/6.jpeg" alt="">
+                    <img src="./img/6.jpeg" alt=""class="panel">
                     <p>売店</p>
                 </div>
             </section>
@@ -91,7 +95,9 @@
         </section>
         <div class="map">
             <h2>アクセスマップ</h2>
-            <iframe " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.32915576553!2d139.5760555451496!3d35.66841030763634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1705908087657!5m2!1sja!2sjp" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="googlemap"> </div>
+                <iframe " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d207446.32915576553!2d139.5760555451496!3d35.66841030763634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2z5p2x5Lqs6YO95p2x5Lqs!5e0!3m2!1sja!2sjp!4v1705908087657!5m2!1sja!2sjp" style="border:0; text-align: center;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </main>
     <footer>
@@ -102,5 +108,9 @@
             TEL 000-000-0000
         </h3>
     </footer>
-    
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>

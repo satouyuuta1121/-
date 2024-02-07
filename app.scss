@@ -1,0 +1,280 @@
+$breakpoints: (
+  'sm': 'screen and (max-width: 500px)',
+
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+*{
+    margin: 0;
+    
+}
+a{
+    color:rgb(1, 133, 133);
+    text-decoration: none;
+
+}
+header{
+    position: relative;
+    background-color: azure;
+    @include mq{
+        height: 150px;
+    }
+}
+
+.logo{
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    @include mq{
+        left: 30px;
+    }
+}
+.phone{
+    position: absolute;
+    top:15px ;
+    right:200px;
+    width: 200px;
+    @include mq{
+        display: none;
+        left: 0;
+    }
+}
+.menu-trigger{
+    display: none;
+    @include mq{
+        display: inline-block;
+        box-sizing: border-box;
+        position: relative;
+        width: 40px;
+        height: 32px;
+        top: 55px;
+        left: 55px;
+    }
+    span{
+        display: inline-block;
+        box-sizing: border-box;
+        position: absolute;
+        background-color: black;
+        left: 200px;
+        width: 100%;
+        height: 4px;
+        &:nth-of-type(1){
+            top: 0;
+        }
+        &:nth-of-type(2){
+            top: 14px;
+        }
+        &:nth-of-type(3){
+            bottom: 0;
+        }
+    }
+    &.active span {
+        &:nth-of-type(1) {
+        transform: translateY(12px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(3) {
+          transform: translateY(-15px) rotate(45deg);
+        }
+    }
+}
+nav{
+
+}
+.menu-item{
+    @include mq{
+        display: block;
+        top: 100px;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, .85);
+    
+    }
+}
+.nav-menu{
+    @include mq{
+    &.active {
+        transition: .5s;
+        transform: translateX(-100%);
+        position: relative;
+        z-index: 2;
+       
+      }
+    }
+}
+
+ul{
+    position: relative;
+    display: flex;
+    left: 300px;
+    top: 100px;
+    width: 1000px;
+    padding: 0;
+    }
+li{    
+    padding:10px 10px;
+    margin:5px;
+    list-style: none;
+    border: solid azure;
+
+}
+li:hover{
+    border-bottom:solid yellow;
+    
+}
+
+main{
+   background-color: azure;
+}
+.mainphoto{
+    top: 150px;
+    margin:0 auto;
+    display: block;
+    width:95%;
+    position: relative;
+    @include mq{
+       top: 0;
+        width: 95%;
+    }
+}
+.mainletter{
+    position: absolute;
+    top:850px;
+    left: 5%;
+    font-size: 75px;
+    background-color: azure;
+    @include mq{
+        display: none;
+    }
+}
+
+
+.subphoto{
+    width: 60%;
+    position: relative;
+    top: 150px;
+    @include mq{
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+        top: 0;
+    }
+}
+.subletter{
+    font-size: 25px;
+    margin: 40px;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    position: absolute;
+    top: 1550px;
+    left: 550px;
+    @include mq{
+        font-size: 16px;
+        top: 550px;
+        left: 50px;
+    }
+}
+.btn{
+    background-color: yellow;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 100px;
+    display: block;
+    margin-left: 70%;
+    cursor: pointer;
+    @include mq{
+        border-radius: 20px;
+        width: 40%;
+        
+    }
+}
+.btn:hover{
+    background-color: rgb(253, 194, 0);
+}
+.infobtn{
+    position: relative;
+    top: 300px;
+    right: 100px;
+    @include mq{
+        top: 150px;
+        right: 150px;
+      
+    }
+}
+.event {
+    max-width: 980px;
+    margin: 100px auto;
+    position: relative;
+    top: 250px;
+    @include mq{
+        text-align: center;
+        margin: 0 auto;
+        top: 200px;
+    }
+}
+.eventbtn{
+    margin: 0 auto;
+}
+.other{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+    top: 200px;
+    @include mq{
+        
+    }
+}
+.otherphoto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include mq{
+    
+    }
+    & .panel{
+        width: 50%;
+        height: auto;
+        margin: 15px;
+        box-sizing: border-box;
+    }
+}
+.otherbtn{
+    right: 100px;
+    margin: 20px  20px 20px 950px;
+    @include mq{
+        margin: 0 auto;
+    }
+}
+
+.map{
+    margin: 0 auto ;
+    display: block;
+    position: relative;
+    top: 200px;
+    background-color: azure;
+    @include mq{
+        display: block;
+        width: 100%;
+    }
+}
+.map iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+footer{
+    background-color:rgb(1, 187, 187) !important;
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    top: 200px;
+} 
